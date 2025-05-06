@@ -1,0 +1,11 @@
+Flask
+Flask-Cors
+Flask-PyMongo
+numpy
+opencv-python
+mtcnn
+keras-facenet
+scikit-learn
+ultralytics
+tensorflow
+pillow  # Required by TensorFlow and MTCNN
