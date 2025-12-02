@@ -396,3 +396,31 @@ def get_user_attendance(username):
 def get_attendance():
     records = list(mongo.db.attendance1.find({}, {"_id": 0}))
     return jsonify({"attendance": records})
+
+curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-installer.exe
+        minikube-installer.exe
+        then set the environmental variables
+        minikube start --driver=docker
+        minikube kubectl -- get pods -A
+        minikube start
+        kubectl create deployment mynginx --image=nginx
+        if already created then ---> kubectl set image deployment/myngnix nginx=nginx:latest
+        kubectl get deployments
+        kubectl expose deployment mynginx --type=NodePort --port=80 --target-port=80
+        kubectl scale deployment mynginx --replicas=4
+        kubectl get service myngnix
+        kubectl port-forward svc/mynginx 8081:80
+        Access the app via http://localhost:8081.
+        kubectl delete deployment mynginx
+        kubectl delete service mynginx
+        minikube stop
+
+Nagios Setup:
+        docker pull jasonrivers/nagios:latest
+        docker run --name nagiosdemo -p 8888:80 jasonrivers/nagios:latest
+        http://localhost:8888
+        docker stop nagiosdemo
+        docker rm nagiosdemo
+        docker images(optional)
+        docker rmijasonrivers/nagios:latest
+
